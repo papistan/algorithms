@@ -94,3 +94,26 @@ function towerBuilder(nFloors) {
   }
   return tower;
 }
+
+// Growth of population
+
+function nbYear(p0, percent, aug, p) {
+    population = p0;
+    n = 0;
+    while(population < p) {
+      population += ( population * (percent / 100) );
+      population += aug;
+      population = Math.round(population);
+      n += 1;
+    }
+    return n
+}
+
+// Remove First and Last Character
+
+function removeChar(str){
+ newArray = str.split("");
+ newArray.shift()
+ newArray.pop()
+ return newArray.join("")
+};
