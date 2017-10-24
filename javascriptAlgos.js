@@ -117,3 +117,27 @@ function removeChar(str){
  newArray.pop()
  return newArray.join("")
 };
+
+// Given a list of integers and a single sum value, return the first two values 
+// (parse from the left please) in order of appearance that add up to form the sum.
+var sum_pairs=function(x, s){
+   pairs = [];
+   for(i=0;i<x.length - 1;i++) {
+     for(z=(i+1);z<(x.length);z++) {
+      if (x[i] + x[z] == s) {
+        pairs.push([x[i], x[z], z]);
+        break;
+      }
+     }
+   }
+   pairs.sort(function(a, b) {
+      return a[2] - b[2];
+    });
+    console.log(pairs)
+   winner = pairs.shift();
+   if (winner !== undefined) {
+     return [winner[0], winner[1]]
+     } else {
+       return undefined
+     }
+}
