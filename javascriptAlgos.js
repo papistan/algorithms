@@ -141,3 +141,41 @@ var sum_pairs=function(x, s){
        return undefined
      }
 }
+
+// Find The Parity Outlier
+function findOutlier(integers){
+  var odd = []
+  var even = []
+  integers.forEach(function(num) {
+    num % 2 === 0 ? even.push(num) : odd.push(num)
+  })
+  if (odd.length === 1)  {
+    return odd[0] 
+    } else {
+    return even[0]
+    }
+}
+
+// Sort My Animals
+function sortAnimal(animal) {
+  
+  if (animal === null) {
+    return null
+  } else if (animal.length == 0) {
+    return animal
+  } else {
+    sorted = animal.sort(function(a, b) {
+      return a.numberOfLegs - b.numberOfLegs 
+    })
+     sorted = sorted.sort(function(a, b) {
+        if(a.numberOfLegs === b.numberOfLegs) {
+            if(a.name < b.name) return -1;
+            if(a.name > b.name) return 1;
+            return 0;
+        } 
+    })
+    return sorted
+  }
+}
+
+
