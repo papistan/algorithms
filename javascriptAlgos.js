@@ -178,4 +178,16 @@ function sortAnimal(animal) {
   }
 }
 
-
+// Count of Smaller Numbers After Self
+var countSmaller = function(nums) {
+    var results = []
+    var length = nums.length
+    for(i=0;i<length;i++) {
+      var compare = nums.slice((i+1), length);
+      var higher = compare.filter(function(numb) {
+        return numb < nums[i]
+      })
+      results.push(higher.length)
+    }
+    return results
+};
