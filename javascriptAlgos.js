@@ -191,3 +191,22 @@ var countSmaller = function(nums) {
     }
     return results
 };
+
+// FizzBuzz
+var fizzBuzz = function(n) {
+       fbArray = []
+    for (i=1;i<=n;i++) {
+      if (i % 3 === 0 && i % 5 === 0 ) {
+        fbArray.push("FizzBuzz");
+      } else if ( i % 5 === 0 ) {
+        fbArray.push("Buzz");
+      } else if (i % 3 === 0) {
+        fbArray.push("Fizz");
+      } else {
+         fbArray.push(String(i))
+      }
+    }
+    return fbArray
+};
+
+
