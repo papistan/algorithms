@@ -219,3 +219,27 @@ var isAnagram = function(s, t) {
       return false
     }
 };
+
+// First Unique Character in a String
+var firstUniqChar = function(s) {
+   if(s.length === 1) {
+     return 0
+   } else {
+     var index = [];
+     var sToArray = s.split("");
+     for(i=0;i<sToArray.length;i++) {
+      var first = sToArray.shift();
+      if(sToArray.includes(first)) {
+      sToArray.push(first)
+    } else {
+      index.push(i)
+      break
+    }
+   }
+    if(index.length === 0) {
+     return -1
+   } else {
+     return index[0]
+   }
+  }
+};
