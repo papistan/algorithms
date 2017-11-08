@@ -219,7 +219,7 @@ var isAnagram = function(s, t) {
       return false
     }
 };
-
+// ____________________________________________
 // First Unique Character in a String
 var firstUniqChar = function(s) {
    if(s.length === 1) {
@@ -243,3 +243,14 @@ var firstUniqChar = function(s) {
    }
   }
 };
+
+//     BETTER SOLUTION
+  var firstUniqChar = function(s) {
+   for(i=0;i<s.length;i++){
+       if (s.indexOf(s[i])===s.lastIndexOf(s[i])){
+          return i;
+      } 
+   }
+   return -1;
+};
+// _____________end first uniqu char___________
