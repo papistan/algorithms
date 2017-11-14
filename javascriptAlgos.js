@@ -254,3 +254,16 @@ var firstUniqChar = function(s) {
    return -1;
 };
 // _____________end first uniqu char___________
+
+// Rotate an array of n elements to the right by k steps.
+var rotate = function(nums, k) {
+    if (k === 0 || nums.length === 1) {
+      return nums
+    } else {
+    const removed = nums.splice((nums.length - k), k)
+    return removed.concat(nums)
+    }
+};
+// End rotate array_______________
+
+
