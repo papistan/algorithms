@@ -265,5 +265,26 @@ var rotate = function(nums, k) {
     }
 };
 // End rotate array_______________
+//   Reverse string
 
+var reverseString = function(s) {
+    return s.split('').reverse().join('')
+};
+
+// End reverse string_____
+
+// return true if any value appears at least twice in the array
+var containsDuplicate = function(nums) {
+     const numsObject = {};
+    let value = false
+    nums.forEach(num => {
+      if (numsObject[num] === 1) {
+        value = true
+      } else {
+        numsObject[num] = 1
+      }
+    })
+    return value
+};
+// end duplicate
 
