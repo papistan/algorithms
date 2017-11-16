@@ -288,3 +288,12 @@ var containsDuplicate = function(nums) {
 };
 // end duplicate
 
+// autocomplete
+function autocomplete(input, dictionary){
+  
+  const words = dictionary.filter(word => {if (word.slice(0, input.replace(/[^a-z]/gi, '').length).toLowerCase() === input.replace(/[^a-z]/gi, '').toLowerCase()) { return word }}
+  )
+  return words.slice(0, 5)
+}
+// end autocomplete
+
