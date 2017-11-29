@@ -297,3 +297,6 @@ function autocomplete(input, dictionary){
 }
 // end autocomplete
 
+// reverse words 
+
+return str.split(' ').map(word => word.split('').reverse().join('')).join(' ')
