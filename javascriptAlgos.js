@@ -300,3 +300,8 @@ function autocomplete(input, dictionary){
 // reverse words 
 
 return str.split(' ').map(word => word.split('').reverse().join('')).join(' ')
+// end reverse words
+
+// Filter 'WUB' from strings 
+return song.split('WUB').filter(string => string !== '').join(' ')
+// end filter
