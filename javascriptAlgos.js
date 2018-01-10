@@ -305,3 +305,31 @@ return str.split(' ').map(word => word.split('').reverse().join('')).join(' ')
 // Filter 'WUB' from strings 
 return song.split('WUB').filter(string => string !== '').join(' ')
 // end filter
+
+// return middle 
+let getMiddle = s => {
+  let middle = Math.floor(s.length / 2);
+  
+  if(s.length % 2 === 0) {
+    return s[middle - 1] + s[middle]
+  } else {
+    return s[middle]
+  }
+}
+// end 
+
+// find index with even right and left totals
+function findEvenIndex(s){
+  let answer = -1
+  for(var i=1;i<s.length;i++){
+    let left = s.slice(0, i).reduce(( acc, cur ) => acc + cur, 0);
+    let right = s.slice(i+1, s.length).reduce(( acc, cur ) => acc + cur, 0);
+    if (left === right) {
+      answer = i;
+      break;
+    }
+  }
+  return answer
+}
+// end
+
