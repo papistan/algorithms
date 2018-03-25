@@ -356,3 +356,21 @@ function sorted(x, y) {
 }
  // end
 
+
+//  Plus one https://leetcode.com/problems/plus-one/
+
+function addOne(x) {
+ let i = x.length - 1
+  while(x[i]=== 9){
+     x[i]=0
+     i--
+  }
+  if(i < 0){
+    x.unshift(1)
+  } else {
+    x[i]++
+  }
+  return x
+}
+
+// end
