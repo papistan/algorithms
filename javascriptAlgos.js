@@ -333,3 +333,26 @@ function findEvenIndex(s){
 }
 // end
 
+// Merge two sorted arrays, return single sorted 
+
+function sorted(x, y) {
+  let i = 0;
+  let j = 0;
+  let solution = [];
+  while(i < x.length && j < y.length) {
+    if (x[i] < y[j]) {
+      solution.push(x[i]);
+      ++i
+    } else {
+      solution.push(y[j]);
+      ++j
+    }
+  };
+  if(i >= x.length) {
+    return solution.concat(y.splice(j))
+  } else {
+    return solution.concat(x.splice(i))
+  }
+}
+ // end
+
