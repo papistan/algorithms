@@ -390,4 +390,18 @@ function twoSum(myArray, target) {
 
 // end
 
+// Duplicate count 
+function duplicateCount(text){
+  myObj = {}
+  text.toLowerCase().split('').forEach(letter => {
+    myObj[letter] ? myObj[letter] = (myObj[letter] + 1) : myObj[letter] = 1
+  });
+  let values = Object.values(myObj);
+  let count = 0
+  values.forEach(num => {
+    if(num > 1) ++count 
+  })
+  return count
+}
 
+// end 
