@@ -417,3 +417,14 @@ function reverse(str) {
 
 // end
 
+// return biggest adjacent elements product 
+function biggestProduct(arrayofNum) {
+    let products = []
+    for(let i=0;i<arrayofNum.length - 1;i++){
+        products.push(arrayofNum[i] * arrayofNum[i + 1])
+    }
+    let sorted = products.sort((a,b) => { return a + b })
+    return sorted[0]
+}
+
+// end 
