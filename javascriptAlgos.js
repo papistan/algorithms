@@ -405,3 +405,15 @@ function duplicateCount(text){
 }
 
 // end 
+
+// Given a string with 3 words reverse the words put back in same order
+
+function reverse(str) {
+    let words = str.split(' ')
+    return words.map(word => 
+        word.split('').reverse().join('')
+    ).join(' ')
+}
+
+// end
+
