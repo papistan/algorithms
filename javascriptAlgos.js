@@ -374,3 +374,20 @@ function addOne(x) {
 }
 
 // end
+
+// TWO SUM https://leetcode.com/problems/two-sum/
+
+function twoSum(myArray, target) {
+  let myObj = {}
+  for(i=0;i<myArray.length;i++){
+    if(myObj[target - myArray[i]]) {
+      return solution = [i, myObj[target - myArray[i]]];
+    } else {
+      myObj[myArray[i]] = i
+    }
+  }
+}
+
+// end
+
+
