@@ -428,3 +428,57 @@ function biggestProduct(arrayofNum) {
 }
 
 // end 
+
+//  add to elements until viable
+function getMinimumUniqueSum(arr) {
+  let hash = {}
+  arr.forEach(num => {
+      if (hash[num] === undefined) {
+          hash[num] = null
+      } else {
+        let i == 0
+        let newNum = num
+        while(hash[newNum] === undefined) {
+          ++newNum
+        }
+        hash[num] = newNum
+      }
+  })
+  let total = 0
+  Object.keys(hash).forEach(key => {
+    total = total + String(key)
+  })
+  return total
+}
+// 
+// vote counter 
+ function electionWinner(votes) {
+    let totalVotes = {}
+    votes.forEach(vote => {
+        if (typeof vote === 'string') {
+          if (totalVotes[vote]) {
+              totalVotes[vote] = (totalVotes[vote] +1)
+          } else {
+              totalVotes[vote] = 1
+          }
+        }
+    })
+    let v = undefined;
+    Object.keys(totalVotes).forEach(key => {
+      if(!v){
+        v = totalVotes[key];
+      } else if (v < totalVotes[key]){
+  	    v = totalVotes[key];
+      }  
+    })
+    let topVoted = Object.keys(totalVotes).filter(function(key) {
+      return totalVotes[key] == v
+    })
+    let sorted = topVoted.sort((a,b) => {
+            if(a < b) return -1;
+            if (a > b) return 1;
+            return 0
+        })
+    return sorted.pop()
+}
+// end
