@@ -482,3 +482,10 @@ function getMinimumUniqueSum(arr) {
     return sorted.pop()
 }
 // end
+
+
+// Takes a string and returns true or false indicating whether its curly braces are balanced.
+function isBalanced(string) {
+  return string.match(/{/gi).length === string.match(/}/gi).length
+}
+// end
