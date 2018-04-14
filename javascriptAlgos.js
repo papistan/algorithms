@@ -511,3 +511,13 @@ function indexOf(array, num) {
 }
 //  end 
 
+//  Reverses the given string (yes, using the built in reverse function is cheating)
+function reverse(string) {
+  let reveresed = []
+  for(let i=0;i<string.length;i++) {
+    reveresed.unshift(string[i])
+  }
+  return reveresed
+}
+
+// end 
