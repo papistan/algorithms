@@ -489,3 +489,12 @@ function isBalanced(string) {
   return string.match(/{/gi).length === string.match(/}/gi).length
 }
 // end
+
+// palindrom case and space insensitive 
+
+function isPalindrome(string) {
+  let letters = string.replace(/\s+/g, '').toLowerCase();
+  return letters == letters.split('').reverse().join("");
+}
+
+// end 
