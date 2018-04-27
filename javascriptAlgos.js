@@ -552,3 +552,25 @@ function div(num, num2) {
   }
 }
 // end 
+
+// Binary search 
+
+function findNum(num, array) {
+  
+  let midIndex = Math.floor(array.length /2);
+  
+  if (array.length < 1) {
+      return false 
+  };
+  
+  if (num === array[midIndex]) {
+    return true
+  } else if (num > array[midIndex]) {
+    
+     return findNum(num, array.slice(midIndex, -1))
+  } else {
+     return findNum(num, array.slice(0, midIndex))      
+  };
+   
+}
+// end
