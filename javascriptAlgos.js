@@ -521,3 +521,17 @@ function reverse(string) {
 }
 
 // end 
+
+// nth Fibonacci num
+function fib(num) {
+ let nums = [0, 1]
+ if (num < 2) {
+   return 1
+ }
+ for(let i = 2; i <= num; i++) {
+   nums[i] = nums[i - 1] + nums[i - 2]
+ }
+ console.log(nums)
+ return nums[num - 1] + nums[num - 2]
+}
+// end
