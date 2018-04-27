@@ -535,3 +535,20 @@ function fib(num) {
  return nums[num - 1] + nums[num - 2]
 }
 // end
+
+// Greatest divisor
+function div(num, num2) {
+  let devisor = 2
+  if (num < num2) {
+    devisor = Math.floor(num / 2)
+  } else {
+    devisor = Math.floor(num2 / 2)
+  }
+  
+  for(let i = devisor; i >=2; i--) {
+    if(num % i === 0 && num2 % i === 0) {
+      return i
+    }
+  }
+}
+// end 
