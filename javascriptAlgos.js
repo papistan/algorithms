@@ -574,3 +574,23 @@ function findNum(num, array) {
    
 }
 // end
+
+// two sorted arrays combine
+function sorted(a1, a2) {
+  let i = 0 
+  let y = 0 
+  let final = []
+  while (a1.length && a2.length) {
+    if(a1[i] < a2[y]) {
+      final.push(a1.shift())
+      i++
+    } else {
+      final.push(a2.shift())
+      y++
+    }
+  }
+  a1.length ? final.push(...a1) : final.push(...a2)
+  return final
+}
+// end 
+
