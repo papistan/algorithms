@@ -594,3 +594,19 @@ function sorted(a1, a2) {
 }
 // end 
 
+// Naive solution https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
+function stock(stocks){
+  let profit = 0;
+  for(i=0;i<stocks.length;i++){
+    let newBuy = stocks[i];
+    
+    for(z=(i+1);z<stocks.length;z++){
+     if ((stocks[z] - newBuy) > profit) {
+       profit = (stocks[z] - newBuy)
+     }
+    }
+  }
+  return profit;
+}
+
+//  end
