@@ -610,3 +610,37 @@ function stock(stocks){
 }
 
 //  end
+
+// https://leetcode.com/problems/valid-parentheses/
+var isValid = function(s) {
+     let answer = true
+     let cache = []
+    if ( s.length === 1) {
+        answer = false
+    } else {
+        let broke = s.split('')
+        let counter = 0
+        broke.forEach(letter => {
+            counter++
+            if (letter == "(" || letter == "[" || letter == "{") {
+                if (counter === s.length) {
+                    answer = false
+                } else {
+                    cache.unshift(letter)
+                }
+                
+            } else if (((letter === ')') && (cache[0] === '(')) || ((letter === ']') && (cache[0] === '[')) || ((letter === '}') && (cache[0] === '{'))) {
+                  cache.shift()
+                } else {
+                    answer = false
+                    return
+                }
+            })
+    }
+    if (cache.length > 0) {
+        return false
+    } else {
+        return answer
+    }
+};
+// end 
