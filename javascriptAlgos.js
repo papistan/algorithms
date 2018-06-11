@@ -649,3 +649,8 @@ function findShort(s){
   return s.split(" ").sort((a,b) => a.length - b.length)[0].length
 }
 // end
+ // square each digit
+  function squareDigits(num){
+  return parseInt(num.toString().split('').map(number => parseInt( number ) * parseInt( number )).join(""))
+}
+// end 
