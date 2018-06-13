@@ -1,4 +1,49 @@
 
+// Return longest possible palindrom
+
+const palindromer = str => {
+  let letterMap = {};
+  
+  // iterate through letters and increment number of recurrences
+  str.split('').forEach(letter => {
+    letterMap[letter] !== undefined ? letterMap[letter] = (letterMap[letter] + 1) : letterMap[letter] = 1
+  });
+  
+  let left = [];
+  let middle = [];
+  let right = [];
+
+  Object.keys(letterMap).forEach(letter => {
+    
+    // number of times letter occurs in input string
+    let timesLetterRepeated = letterMap[letter];
+    
+    if (timesLetterRepeated === 1) {
+      
+      // set middle value as letter if it does not already exist
+      if (middle.length === 0 ) {
+        middle = letter
+      }
+
+    // if current letter is repeated an odd number of times AND middle container only has a letter repeated ONCE, save current letter in middle container
+    } else if ((timesLetterRepeated % 2) !== 0 && (middle.length < 2)) {
+
+      middle = letter.repeat(timesLetterRepeated)
+  
+    } else {
+
+      // add current letter to right and left container evenly 
+      letters = letter.repeat( Math.floor(timesLetterRepeated / 2));
+      left.unshift(letters);
+      right.push(letters);
+    }
+  })
+
+  return [...left, ...middle, ...right].join('')
+}
+
+// 
+
 // Return index of number that does not fit with collection in array - either solo odd or even:
 
 function iqTest(numbers){
