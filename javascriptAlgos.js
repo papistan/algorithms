@@ -1,4 +1,23 @@
 
+
+
+// Linear unique sort
+
+function sort(arr){
+  let breadcrumb = {};
+  let final = []
+  
+  for(let i = 0; i<arr.length; i++) {
+    if (breadcrumb[arr[i]] === undefined ){
+      final.push(arr[i]);
+      breadcrumb[arr[i]] = true
+    } 
+  }
+  return final.sort((a,b) => a - b)
+}
+
+// END
+
 // Return longest possible palindrom
 
 const palindromer = str => {
