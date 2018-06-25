@@ -1,6 +1,21 @@
 
 
-
+/// Memoized closure 
+const memoizedClosureTimes10 = () => {
+  let cache = {};
+  return function(n) {
+    if (n in cache) {
+			console.log('Fetching from cache:', n);
+			return cache[n];
+		} else {
+			console.log('Calculating result');
+			let result = times10(n); //90
+			cache[n] = result; 
+			return result;
+		}
+  }
+};
+// End
 // Linear unique sort
 
 function sort(arr){
