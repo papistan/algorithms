@@ -1,3 +1,38 @@
+// Binary search
+
+function binarySearch(list, item) {
+  let start = 0
+  let end = list.length - 1
+  let mid
+
+  while(list[mid] != item && start <= end) {
+    mid = Math.floor((start + end) / 2)
+    if (item < list[mid]) {
+      end = (mid - 1)
+    } else if (item > list[mid]) {
+      start = (mid + 1)
+    }
+  }
+  return (list[mid] === item)
+}
+
+
+
+// function binarySearch(list, item) {
+//   let moreThanOneNum = (list.length > 1 )
+  
+//   let mid = Math.floor(list.length / 2)
+ 
+//   if (list[mid] === item) {
+//     return true
+//   } else if ((list[mid] > item) && moreThanOneNum ) {
+//     return binarySearch( list.slice(0, mid), item)
+//   } else if (moreThanOneNum) {
+//     return binarySearch( list.slice(mid), item)
+//   }
+//   return false
+// }
+// END
 
 // Permutation Palindrome
 const perm = (word) => {
