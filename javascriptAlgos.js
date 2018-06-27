@@ -1,3 +1,19 @@
+// Highest adjacent sum in array
+const adjacent = (array) => {
+  let answer = 0
+  let sum = 0
+  
+  for(let i = 0; i<array.length - 1; i++) {
+    sum = (array[i] + array[i + 1])
+    if (sum > answer){
+      answer = sum
+    }
+  }
+
+  return answer
+}
+
+// End
 // Binary search
 
 function binarySearch(list, item) {
