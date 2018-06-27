@@ -1,4 +1,25 @@
 
+// Permutation Palindrome
+const perm = (word) => {
+  let letters = {}
+
+  word.split('').forEach(letter => {
+    if(!letters[letter]) {
+      letters[letter] = 1
+    } else {
+      letters[letter] = (letters[letter] + 1)
+    }
+  })
+  
+  let odd = Object.keys(letters).filter(key => letters[key] % 2 !== 0)
+
+  if(((word % 2 === 0) && (odd.length > 0)) || ((word % 2 !== 0) && (odd.length > 1)) ){
+    return false
+  } 
+
+  return true
+}
+// END
 
 /// Memoized closure 
 const memoizedClosureTimes10 = () => {
