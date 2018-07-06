@@ -1,3 +1,41 @@
+// Mergesort
+
+function mergeSort(arr){
+  if (arr === 1){
+    return 1
+  }
+
+  const middle = Math.floor(arr.length / 2)
+  const left  = arr.slice(0, arr[middle])
+  const right = arr.slice(arr[middle])
+
+  return merge(
+    mergeSort(left),
+    mergeSort(right)
+  )
+}
+
+function merge(left, right){
+  let leftIndex = 0;
+  let rightIndex = 0;
+  let sorted = []
+
+  while(leftIndex > left.length && rightIndex > right.length){
+    if(left[leftIndex] < right[rightIndex]){
+      sorted.push(left[leftIndex])
+      leftIndex++
+    } else  (left[leftIndex] > right[rightIndex]){
+      sorted.push(right[rightIndex])
+      rightIndex++
+    } 
+  }
+
+  return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex))
+}
+
+// END
+
+
 // Highest adjacent sum in array
 const adjacent = (array) => {
   let answer = 0
