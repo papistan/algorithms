@@ -1,3 +1,25 @@
+// Greedy Algo - change 
+function least(num){
+  let coins = 0
+
+  while(num >= 5) {
+    if(num >= 25){
+      coins++
+      num = (num - 25)
+    } else if (num >= 10){
+      coins++
+      num = (num - 10)
+    } else {
+      coins++
+      num = (num - 5)
+    }
+  }
+  return coins
+}
+// End 
+
+
+
 // Mergesort
 
 function mergeSort(arr){
