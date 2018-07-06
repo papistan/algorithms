@@ -8,6 +8,8 @@ function mergeSort(arr){
   const middle = Math.floor(arr.length / 2)
   const left  = arr.slice(0, arr[middle])
   const right = arr.slice(arr[middle])
+  const sortedLeft = mergeSort(left);
+  const sortedRight = mergeSort(right);
 
   return merge(
     mergeSort(left),
