@@ -1,0 +1,111 @@
+Frontend Code Challenges
+
+// JS 
+
+let deleteModal = document.getElementById("deleteModal")
+
+const toggleModal = () => {
+	if (deleteModal.style.display === "none") {
+        deleteModal.style.display = "flex";
+    } else {
+        deleteModal.style.display = "none";
+    }
+}
+
+// CSS
+
+html, body {
+    margin: 0px;
+    font-family: arial;
+}
+
+#deleteModalToggle {
+  position: fixed;
+  margin-top: 8px;
+  z-index: -2;
+}
+
+#deleteModal {
+  display: flex;
+  margin: 0%;
+  height: 100vh;
+  width: 100vw;
+  background-color: grey;
+  opacity: 0.7;
+  z-index: -1;
+  position: fixed;
+  align-items: center;
+   justify-content: center;
+}
+
+#modalMessage {
+
+  height: 60vh;
+  width: 60vw;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   border-radius: 15px;
+  overflow: hidden
+}
+
+.modalGrey {
+  background-color: lightgrey;
+  flex: 1;
+  width: 100%;
+  display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.modalWhite {
+  flex: 1;
+   width: 100%;
+  display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.modalButtons {
+  flex: 1; 
+  background-color: lightgrey;
+   width: 100%;
+  display: flex;
+   align-items: center;
+  justify-content: flex-end;
+
+}
+
+.cancelButton {
+  height: 8vh;
+  width: 10vw;
+  color: white;
+  background-color: grey;
+  margin-right: 2vw;
+ 
+}
+
+.deleteButton {
+   height: 8vh;
+  width: 10vw;
+  color: white;
+  background-color: darkorange;
+   margin-right: 2vw;
+}
+
+// HTML
+
+<button id="deleteModalToggle" onClick="toggleModal()">Delete</button>
+<div id="deleteModal" onClick="toggleModal()">
+  <div id="modalMessage">
+    <div class="modalGrey">Are you sure you want to delete?</div>
+    <div class="modalWhite">Action cannot be undone</div>
+    <div class="modalButtons" > 
+      <button class="cancelButton" submit="toggleModal()">CANCEL</button>
+      <button class="deleteButton" submit="toggleModal()">DELETE</button>
+    </div>
+  </div>
+</div>
