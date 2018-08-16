@@ -1,3 +1,18 @@
+
+// Find elements in both arrays equal to sum
+const sumToNum = (array1, array2, sum) => {
+  const pairs = {}
+
+  array1.forEach(num => {
+    pairs[sum - num] = num
+  })
+
+  return array2.filter(num => pairs[num]).map(num => [num, pairs[num]])
+}
+
+// end
+
+
 // Greedy Algo - change 
 function least(num){
   let coins = 0
