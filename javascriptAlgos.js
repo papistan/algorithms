@@ -1,3 +1,18 @@
+// random num generator 
+ const randomNumGenerator = (n, m) => {
+  	const numbers = {}
+  	while(Object.keys(numbers).length < m){
+    	  const randomNum = Math.floor((Math.random() * n) + 1)
+    	  if(!numbers[randomNum]){
+      	    numbers[randomNum] = true
+    	  }
+  	}
+  	return Object.keys(numbers).map(num => parseInt(num))
+      }
+ 
+ // end 
+
+
 // reverse data
 const reverse = (data) => data.reduceRight((a, b) => a.concat(b), [])
 
