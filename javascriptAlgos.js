@@ -1,3 +1,7 @@
+// Given a one dimensional array of data write a function that returns a new array with the data reversed.
+const reverse = (data) => data.reduceRight((a, b) => a.concat(b), [])
+
+// end
 
 // Find elements in both arrays equal to sum
 const sumToNum = (array1, array2, sum) => {
