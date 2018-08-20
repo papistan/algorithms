@@ -1,4 +1,4 @@
-// Given a one dimensional array of data write a function that returns a new array with the data reversed.
+// reverse data
 const reverse = (data) => data.reduceRight((a, b) => a.concat(b), [])
 
 // end
