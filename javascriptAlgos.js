@@ -1,3 +1,18 @@
+// random element returner 
+const randomElementGenerator = (myArray, m) => {
+  const elements = {}
+  const length = myArray.length - 1
+  while(Object.keys(elements).length < m){
+    const randomNum = Math.floor((Math.random() * length) + 1)
+    if(!elements[randomNum]){
+      elements[randomNum] = myArray[randomNum]
+    }
+  }
+  return Object.keys(elements).map(num => elements[num])
+}
+// end
+
+
 // random num generator 
  const randomNumGenerator = (n, m) => {
   	const numbers = {}
