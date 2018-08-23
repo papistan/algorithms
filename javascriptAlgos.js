@@ -1,5 +1,32 @@
 
+// random element returner 
+const randomElementGenerator = (myArray, m) => {
+  const elements = {}
+  const length = myArray.length - 1
+  while(Object.keys(elements).length < m){
+    const randomNum = Math.floor((Math.random() * length) + 1)
+    if(!elements[randomNum]){
+      elements[randomNum] = myArray[randomNum]
+    }
+  }
+  return Object.keys(elements).map(num => elements[num])
+}
+// end
 
+ // random num generator 
+ const randomNumGenerator = (n, m) => {
+  	const numbers = {}
+   	while(Object.keys(numbers).length < m){
+     	  const randomNum = Math.floor((Math.random() * n) + 1)
+     	  if(!numbers[randomNum]){
+       	    numbers[randomNum] = true
+     	  }
+   	}
+   	return Object.keys(numbers).map(num => parseInt(num))
+       }
+  
+  // end
+ 
 // Find elements in both arrays equal to sum
 const sumToNum = (array1, array2, sum) => {
   const pairs = {}
