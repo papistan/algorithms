@@ -1,0 +1,16 @@
+Compound Assignment
++=, -=, *=, and /=
+combine a math operation with assignment
+
+Coercion
+- using Number(..) coerces value to number
+- "99.99" == 99.99, JS converts "99.99" to 99.99
+
+Loose vs Strict Equality
+"99.99" == 99.99 , returns true
+
+Primary purpose of variables
+- managing programs's state
+
+
+Coercion in Conditional statements
