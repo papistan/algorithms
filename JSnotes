@@ -1,16 +1,47 @@
-Compound Assignment
+**Compound Assignment**
 +=, -=, *=, and /=
 combine a math operation with assignment
 
-Coercion
+**Coercion**
 - using Number(..) coerces value to number
 - "99.99" == 99.99, JS converts "99.99" to 99.99
+- Implicit vs Explicit
+  var a = "42";
+  Explicit Coercion
+  var b = Number( a );
+  
+  Implicit Coercion
+  var b = a * 1;
 
-Loose vs Strict Equality
-"99.99" == 99.99 , returns true
+**Loose vs Strict Equality**
+  "99.99" == 99.99 , returns true
+  === checks for value equality without allowing coercion
+  == allows coercion
+    var a = "42";
+    var b = 42;
+    a == b;			// true
+    a === b;		// false
+  *Non-primitives* 
+  - check by reference, so obj1 === obj2 would return false even if same values
+  
+New
+- only use for *class* not for function module
+
+**Falsy values**
+ - '', 0, -0, NaN, null, undefined, false
+
+**Truthy values**
+- anything not on falsy list
+
 
 Primary purpose of variables
 - managing programs's state
+
+**Typeof**
+- returns string representation of the type, ex. "undefined"
+
+Objects
+- bracket notation (i.e., obj["a"], needs string literal or variable. Ex. obj[a] returns 'ReferenceError: a is not defined'
 
 
 Coercion in Conditional statements
