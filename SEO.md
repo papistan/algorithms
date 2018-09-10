@@ -8,9 +8,9 @@
 * rel="nofollow" - not followed by crawlers
 * Use keywords:   
   
-⋅⋅* In the title tag  
-⋅⋅* At least two or three times in text  
-⋅⋅* in alt attribute of an image   
-⋅⋅* in the URL    
-⋅⋅* in the meta description tag   
-⋅⋅* NOT in link anchor text pointing to other pages on your site   
+  - In the title tag  
+  - At least two or three times in text  
+  -  in alt attribute of an image   
+  - in the URL    
+  - in the meta description tag   
+  - NOT in link anchor text pointing to other pages on your site   
